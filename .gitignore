@@ -1,0 +1,11 @@
+#DocLift
+
+.idea/*
+
+*.properties
+*.class
+
+*.war
+*.jar
+*.ear
+
