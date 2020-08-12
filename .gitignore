@@ -1,6 +1,7 @@
 #DocLift
 
 .idea/*
+.target/*
 
 *.properties
 *.class
