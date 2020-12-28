@@ -18,6 +18,10 @@
                 <#if isRecorted || isAdmin>
 
                     <li class="nav-item">
+                        <a class="nav-link" id="list_users" href="/allResolutionList" title="Список користувачів"><img src="/static/adminList.svg" alt=""></a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" id="add_doc" href="/createDocument" title="Додати документ"><img src="/static/text-document-add.svg" alt=""></a>
                     </li>
 

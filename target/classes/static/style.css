@@ -89,13 +89,13 @@ h1{
 }
 
 .my_resolution_line1{
-     background: black;
+     background: #1a1958;
      width: 100%;
      height: 2px;
 }
 
 .my_resolution_line2{
-    background: black;
+    background: #1a1958;
     width: 100%;
     height: 5px;
 }
@@ -120,4 +120,17 @@ h1{
     font-size: 2rem;
     min-height: 50vh;
 
+}
+
+.colorS{
+    color: #1a1958;
+}
+.backgroundS{
+    background:#1a1958;
+}
+
+
+.act_bloc_user{
+    background: #e8e8e8;
+    padding: 4px;
 }

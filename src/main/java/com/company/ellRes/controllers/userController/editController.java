@@ -1,9 +1,11 @@
 package com.company.ellRes.controllers.userController;
 
 
-import com.company.ellRes.domian.*;
+import com.company.ellRes.domian.Contact;
+import com.company.ellRes.domian.Individual;
+import com.company.ellRes.domian.Role;
+import com.company.ellRes.domian.User;
 import com.company.ellRes.errorConfig.errorController;
-import com.company.ellRes.errorConfig.errorString;
 import com.company.ellRes.errorConfig.errorValue;
 import com.company.ellRes.fileService.SaveCaption;
 import com.company.ellRes.service.ContactService;
@@ -133,7 +135,7 @@ public class editController {
 
 
         if (!form.get("password").equals("")){
-            v = errorController.parse(form.get("passsword"), new int[] {1});
+            v = errorController.parse(form.get("password"), new int[] {1});
             if (v != 0){
                 model.addAttribute("error", "Поле пароль " + errorValue.value(v));
                 model.addAttribute("user",user);

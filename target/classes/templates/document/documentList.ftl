@@ -56,12 +56,14 @@
         </tr>
         </thead>
         <tbody>
+
         <#list documents as document>
             <tr>
                 <#if isTablin || isAdmin>
                     <td>
                         <div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row">
-                            <a href="/resolutionCreate/${document?ifExists.id?ifExists}">Розписати</a>
+                            <a class="pathC" href="/resolutionCreate/${document?ifExists.id}">Розписати
+                            </a>
                         </div>
                     </td>
                 </#if>
@@ -82,4 +84,7 @@
     </div>
 
     <script type="text/javascript" charset="utf8" src="/static/main.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
+
+
 </@dom.dom>

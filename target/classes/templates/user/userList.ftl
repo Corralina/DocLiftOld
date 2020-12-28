@@ -20,7 +20,7 @@
             <tr>
                 <td><div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row">${user?ifExists.username?ifExists}</div></td>
                 <td><div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row">${user?ifExists.information?ifExists.individual?ifExists.initials?ifExists}</div></td>
-                <td style="background: #f1f1f1"><div class="mt-2  d-flex justify-content-center" ><a href="/userEdit/${user?ifExists.id?ifExists}" title="Edit"><img style="width: 40px" src="/static/settings-line.svg" alt=""></a></div></td>
+                <td style="background: #f1f1f1"><div class="mt-2  d-flex justify-content-center" ><a class="pathC" href="/userEdit/${user?ifExists.id?ifExists}" title="Edit"><img style="width: 40px" src="/static/settings-line.svg" alt=""></a></div></td>
             </tr>
         </#list>
         </tbody>
@@ -28,5 +28,6 @@
     </div>
 
     <script type="text/javascript" charset="utf8" src="/static/main.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 </@dom.dom>

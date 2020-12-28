@@ -22,10 +22,11 @@
                     </select>
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                <input type="hidden" value="${userSend?ifExists.id?ifExists}" name="send">
+                <input type="hidden" class="inpV" value="${userSend?ifExists.id?ifExists}" name="send">
                 <button class="btn btn-primary my_button mt-3"  type="submit" >Зберегти</button>
             </form>
         </div>
     </div>
 
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 </@dom.dom>

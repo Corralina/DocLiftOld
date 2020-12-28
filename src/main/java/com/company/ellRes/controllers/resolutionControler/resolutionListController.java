@@ -2,8 +2,6 @@ package com.company.ellRes.controllers.resolutionControler;
 
 
 import com.company.ellRes.domian.Performer;
-import com.company.ellRes.domian.Resolution;
-import com.company.ellRes.domian.Role;
 import com.company.ellRes.domian.User;
 import com.company.ellRes.service.PerformerService;
 import com.company.ellRes.service.ResolutionService;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.util.Map;
-import java.util.Set;
 
 @Controller
 @RequestMapping("/resolutionList")
@@ -36,7 +33,7 @@ public class resolutionListController {
             @AuthenticationPrincipal User user,
             Model model){
 
-        model.addAttribute("resolutions", performerService.allUser(user));
+            model.addAttribute("resolutions", performerService.allUser(user));
 
         return "resolution/resolutionList";
     }

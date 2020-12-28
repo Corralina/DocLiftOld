@@ -43,14 +43,26 @@ public class ResolutionService {
         return resolutionRepo.findTop50ByAgreesOrFilling(user, user, Sort.by(Sort.Direction.DESC, "date"));
     }
 
+
+
     public Iterable<Resolution> allFinishFalseFilter(String number, String agrees, String filling){
-        return resolutionRepo.findAllByDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLike("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", Sort.by(Sort.Direction.DESC, "date"));
+        return resolutionRepo.findAllByStatusFinishFalseAndDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLike("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", Sort.by(Sort.Direction.DESC, "date"));
     }
     public Iterable<Resolution> allFinishFalseFilterDate(String number, String agrees, String filling, LocalDate start, LocalDate stop){
-        return resolutionRepo.findAllByDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLikeAndDateAfterAndDateBefore("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", start, stop, Sort.by(Sort.Direction.DESC, "date"));
+        return resolutionRepo.findAllByStatusFinishFalseAndDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLikeAndDateAfterAndDateBefore("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", start, stop, Sort.by(Sort.Direction.DESC, "date"));
     }
     public Iterable<Resolution> allFinishFalseFilterOneDate(String number, String agrees, String filling, LocalDate date){
-        return resolutionRepo.findAllByDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLikeAndDate("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", date, Sort.by(Sort.Direction.DESC, "date"));
+        return resolutionRepo.findAllByStatusFinishFalseAndDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLikeAndDate("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", date, Sort.by(Sort.Direction.DESC, "date"));
+    }
+
+    public Iterable<Resolution> allFinishTrueFilter(String number, String agrees, String filling){
+        return resolutionRepo.findAllByStatusFinishTrueAndDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLike("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", Sort.by(Sort.Direction.DESC, "date"));
+    }
+    public Iterable<Resolution> allFinishTrueFilterDate(String number, String agrees, String filling, LocalDate start, LocalDate stop){
+        return resolutionRepo.findAllByStatusFinishTrueAndDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLikeAndDateAfterAndDateBefore("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", start, stop, Sort.by(Sort.Direction.DESC, "date"));
+    }
+    public Iterable<Resolution> allFinishTrueFilterOneDate(String number, String agrees, String filling, LocalDate date){
+        return resolutionRepo.findAllByStatusFinishTrueAndDocumentNumberLikeAndAgreesInformationIndividualInitialsLikeAndFillingInformationIndividualInitialsLikeAndDate("%" + number + "%", "%" + agrees + "%", "%" + filling + "%", date, Sort.by(Sort.Direction.DESC, "date"));
     }
 
 

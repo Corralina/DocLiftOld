@@ -9,22 +9,22 @@
         <div class="shadow-lg mb-5 bg-white rounded border p-2 d-flex flex-row  justify-content-around my_resolution">
 
             <div style="width: 100%">
-                <p class="text-center">
+                <p class="text-center font-weight-bold">
                     ${resolution?ifExists.agrees?ifExists.information?ifExists.individual?ifExists.post?ifExists}
                 </p>
-                <p class="text-center">
-                    Сомого апеляційного
+                <p class="text-center font-weight-bold">
+                    Сьомого апеляційного
                 </p>
-                <p class="text-center">
+                <p class="text-center font-weight-bold">
                     адміністративного суду
                 </p>
                 <div class="my_resolution_line1"></div>
                 <div class="my_resolution_line2"></div>
                 <#list performers?ifExists as performer>
-                    <p class="text-center">
+                    <p class="text-center font-weight-bold">
                         ${performer?ifExists.user?ifExists.information?ifExists.individual?ifExists.initials?ifExists}
                     </p>
-                    <p class="text-center">
+                    <p class="text-center font-italic">
                         ${performer?ifExists.coment?ifExists}
                     </p>
                 </#list>
@@ -32,10 +32,10 @@
                     <div class="d-flex flex-row  justify-content-center my_resolution_caption_block">
 
                     </div>
-                    <p class="text-right">
+                    <p class="text-right font-weight-bold font-italic">
                         ${resolution?ifExists.agrees?ifExists.information?ifExists.individual?ifExists.initials?ifExists}
                     </p>
-                    <p class="text-right">
+                    <p class="text-right font-weight-bold font-italic">
                         ${resolution?ifExists.date?ifExists}
                     </p>
                 </div>
@@ -46,7 +46,7 @@
         <div class="d-flex flex-row p-4 pl-3">
             <div class="my_resolution_text d-flex flex-column justify-content-around " >
                 <label>${status?ifExists}</label>
-                <label>Дата резолюції: ${resolution?ifExists.data?ifExists}</label>
+                <label>Дата резолюції: ${resolution?ifExists.date?ifExists}</label>
                 <label>коментар: ${resolution?ifExists.coment?ifExists}</label>
                 <label>Розписав резолюцію: ${resolution?ifExists.filling?ifExists.information?ifExists.individual?ifExists.surname?ifExists} ${resolution?ifExists.filling?ifExists.information?ifExists.individual?ifExists.name?ifExists} ${resolution?ifExists.filling?ifExists.information?ifExists.individual?ifExists.middlename?ifExists}</label>
                 <div class="d-flex flex-row">
@@ -63,7 +63,7 @@
                 <form action="/resolutionVisa" method="post">
                     <button class="btn btn-primary my_button mt-2" type="submit">Підтвердити</button>
                     <input type="hidden" value="${_csrf.token}" name="_csrf">
-                    <input type="hidden" value="${resolution?ifExists.id?ifExists}" name="resolution">
+                    <input type="hidden" class="inpV" value="${resolution?ifExists.id?ifExists}" name="resolution">
                 </form>
             </div>
             <div>
@@ -74,12 +74,14 @@
                             <button class="btn btn-primary my_button" type="submit" id="button-addon2">Повернути</button>
                         </div>
                         <input type="hidden" value="${_csrf.token}" name="_csrf">
-                        <input type="hidden" value="${resolution?ifExists.id?ifExists}" name="resolution">
+                        <input type="hidden" class="inpV" value="${resolution?ifExists.id?ifExists}" name="resolution">
                     </div>
                 </form>
 
             </div>
         </div>
     </#if>
+
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 </@dom.dom>

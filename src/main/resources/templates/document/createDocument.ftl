@@ -6,7 +6,7 @@
             <div class="mb-3">
                 <h1 class="justify-content"> Завантаження документу </h1>
             </div>
-            <div class="" style="position: absolute; top: 20px; left: 15px; color: red">
+            <div class="err" style="position: absolute; top: 20px; left: 15px; color: red">
                 <#if error??>
                     <p>* ${error?ifExists}</p>
                 </#if>
@@ -27,7 +27,7 @@
 <#--                        <label class="m-3">Image  <input class="my_file_upload" type="file" name="image" ></label>-->
 <#--                    </div>-->
                     <div class="rd">
-                        <label class="m-3">File  <input class="my_file_upload" type="file" name="file"></label>
+                        <label class="m-3">File  <input class="my_file_upload" type="file" name="file" onchange="attach(this)"/></label>
                     </div>
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
@@ -36,5 +36,23 @@
         </div>
     </div>
 
+    <script>
+        function attach(input){
+
+            var attach_size = 15*1024*1024; //15мб
+
+            var attach_file = input.files[0];
+
+            if(attach_file.size > attach_size){
+
+                $('.err').html('Размер вложений ограничен 15 мб!');
+
+                $('.my_file_upload').val(''); //удалить аттач, если превышен размер файла
+
+            }
+
+        };
+
+    </script>
 
 </@dom.dom>

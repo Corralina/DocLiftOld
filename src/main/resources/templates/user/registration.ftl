@@ -21,10 +21,12 @@
                     <input type="password" value="${user?ifExists.password?ifExists}" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="пароль">
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                <input type="hidden" value="${information?ifExists.id?ifExists}" name="information">
+                <input type="hidden" class="inpV" value="${information?ifExists.id?ifExists}" name="information">
                 <button class="btn btn-primary my_button mt-3" style="float:right;" type="submit" >Зберегти</button>
             </form>
         </div>
     </div>
+
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 </@dom.dom>

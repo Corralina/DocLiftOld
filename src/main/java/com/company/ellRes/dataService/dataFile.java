@@ -15,7 +15,7 @@ public class dataFile {
         Date currentDate = c.getTime();
         c.setTime(currentDate);
         Date vchera = c.getTime();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM");
         thisDate = sdf.format(vchera);
         return thisDate;
     }

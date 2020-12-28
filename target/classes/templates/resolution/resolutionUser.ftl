@@ -10,22 +10,22 @@
         <div class="shadow-lg mb-5 bg-white rounded border p-2 d-flex flex-row  justify-content-around my_resolution">
 
             <div style="width: 100%">
-                <p class="text-center">
+                <p class="text-center font-weight-bold colorS">
                     ${resolution?ifExists.visa?ifExists.position?ifExists}
                 </p>
-                <p class="text-center">
-                    Сомого апеляційного
+                <p class="text-center font-weight-bold colorS">
+                    Сьомого апеляційного
                 </p>
-                <p class="text-center">
+                <p class="text-center font-weight-bold colorS">
                     адміністративного суду
                 </p>
-                <div class="my_resolution_line1" style="background: black;width: 100%; height: 2px"></div>
-                <div class="my_resolution_line2" style="background: black;width: 100%; height: 5px; margin-top: 2px"></div>
+                <div class="my_resolution_line1" style="width: 100%; height: 2px"></div>
+                <div class="my_resolution_line2" style="width: 100%; height: 5px; margin-top: 2px"></div>
                 <#list statics?ifExists as performer>
-                    <p class="text-center">
+                    <p class="text-center font-weight-bold">
                         ${performer?ifExists.initials?ifExists}
                     </p>
-                    <p class="text-center">
+                    <p class="text-center font-italic">
                         ${performer?ifExists.doer?ifExists}
                     </p>
                 </#list>
@@ -35,10 +35,10 @@
                             <img src="/caption/${resolution?ifExists.agrees?ifExists.information?ifExists.individual?ifExists.caption?ifExists}" class="my_resolution_caption_image">
                         </#if>
                     </div>
-                    <p class="text-right">
+                    <p class="text-right font-weight-bold font-italic colorS">
                         ${resolution?ifExists.visa?ifExists.agrees?ifExists}
                     </p>
-                    <p class="text-right">
+                    <p class="text-right font-weight-bold font-italic colorS">
                         ${resolution?ifExists.date?ifExists}
                     </p>
                 </div>
@@ -72,7 +72,7 @@
                             <button class="btn btn-primary my_button ml-3" type="submit">Сформувати резолюцію</button>
                         </div>
                         <input type="hidden" value="${_csrf.token}" name="_csrf">
-                        <input type="hidden" value="${resolution.id}" name="resolution">
+                        <input type="hidden" class="inpV" value="${resolution.id}" name="resolution">
                     </form>
                 </#if>
 
@@ -107,6 +107,6 @@
     </div>
 
 
-
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 </@dom.dom>

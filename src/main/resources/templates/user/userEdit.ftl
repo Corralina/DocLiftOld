@@ -91,10 +91,12 @@
 
 
         <input type="hidden" value="${_csrf.token}" name="_csrf">
-        <input type="hidden" value="${user?ifExists.id?ifExists}" name="userId">
+        <input type="hidden" class="inpV" value="${user?ifExists.id?ifExists}" name="userId">
 
         <div class="row mt-3">
             <button class="btn btn-success m-3 " type="submit">Зберегти</button>
         </div>
     </form>
+
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 </@dom.dom>

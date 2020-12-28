@@ -1,5 +1,6 @@
 package com.company.ellRes.controllers.documentController;
 
+import com.company.ellRes.domian.Document;
 import com.company.ellRes.domian.User;
 import com.company.ellRes.service.DocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -25,7 +27,13 @@ public class documentListController {
     public String documentList(
             Model model
     ) {
-        model.addAttribute("documents", documentService.allFree());
+        Iterable<Document> documents = documentService.allFree();
+        HashMap<Long, String> pat = new HashMap<>();
+        for (Document document: documents) {
+            pat.put(document.getId(), document.getId().toString());
+        }
+        model.addAttribute("documents", documents);
+        model.addAttribute("pat", pat);
         return "document/documentList";
     }
 

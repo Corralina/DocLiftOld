@@ -84,7 +84,7 @@
                 <td><div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row" >${resolution?ifExists.agrees?ifExists.information?ifExists.individual?ifExists.initials?ifExists}</div></td>
                 <td><div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row" >${resolution?ifExists.filling?ifExists.information?ifExists.individual?ifExists.initials?ifExists}</div></td>
                 <td><div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row" ><a href="/pdf/${resolution?ifExists.document?ifExists.name?ifExists}" target="_blank">Відкрити файл</a></div></td>
-                <td><div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row" ><a href="/resolution/${resolution?ifExists.id?ifExists}">Перегляд</a></div></td>
+                <td><div class="rounded mt-2 shadow-lg mb-2 rounded my_table_row" ><a class="pathC" href="/resolution/${resolution?ifExists.id?ifExists}">Перегляд</a></div></td>
             </tr>
         </#list>
         </tbody>
@@ -93,6 +93,7 @@
 
 
     <script type="text/javascript" charset="utf8" src="/static/main.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 
 

@@ -9,7 +9,9 @@ public enum Role implements GrantedAuthority {
     RECORTED,
     TABLIN,
     CONFIRM,
-    DROP;
+    DROP,
+    HEAD,
+    ACTCREATED;
 
     private Role() {
     }

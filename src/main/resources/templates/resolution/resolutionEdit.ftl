@@ -39,7 +39,7 @@
                 </div>
 
                 <input type="hidden" value="${_csrf.token}" name="_csrf">
-                <input type="hidden" value="${revers?ifExists.id?ifExists}" name="revers">
+                <input type="hidden" class="inpV" value="${revers?ifExists.id?ifExists}" name="revers">
 
             </form>
         </div>
@@ -59,6 +59,8 @@
 
     </div>
 
+
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 <script>
     count = 1;
@@ -141,5 +143,6 @@
 
 
 </script>
+
 
 </@dom.dom>

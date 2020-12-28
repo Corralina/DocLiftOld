@@ -35,7 +35,7 @@
                 </div>
 
                 <input type="hidden" value="${_csrf.token}" name="_csrf">
-                <input type="hidden" value="${document?ifExists.id?ifExists}" name="document">
+                <input type="hidden" class="inpV" value="${document?ifExists.id?ifExists}" name="document">
 
             </form>
         </div>
@@ -54,6 +54,8 @@
 
     </div>
 
+
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 
 

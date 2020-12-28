@@ -21,10 +21,12 @@
                     <input name="phone" type="text" class="form-control bfn-phone" data-format="380 (dd) dd dd ddd" value="${contact?ifExists.phone?ifExists}" id="exampleDropdownFormPassword1">
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                <input type="hidden" value="${individual?ifExists.id?ifExists}" name="individual">
+                <input type="hidden" class="inpV" value="${individual?ifExists.id?ifExists}" name="individual">
                 <button class="btn btn-primary my_button mt-3" style="float:right;" type="submit" >Далі</button>
             </form>
         </div>
     </div>
+
+    <script type="text/javascript" charset="utf8" src="/static/pathCorrect.js"></script>
 
 </@dom.dom>

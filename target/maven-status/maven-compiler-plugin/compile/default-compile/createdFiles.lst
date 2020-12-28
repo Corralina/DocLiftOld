@@ -38,6 +38,7 @@ com\company\ellRes\controllers\resolutionControler\resolutionController.class
 com\company\ellRes\controllers\resolutionControler\resolutionEditController.class
 com\company\ellRes\controllers\documentController\DocumentCreateController.class
 com\company\ellRes\errorConfig\nullConfig.class
+com\company\ellRes\controllers\resolutionControler\resolutionAdminList.class
 com\company\ellRes\repository\StatusRepo.class
 com\company\ellRes\configuration\WebSecurityConfig.class
 com\company\ellRes\controllers\userController\registrationController.class
